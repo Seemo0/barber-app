@@ -2,7 +2,7 @@ import { db } from "@/db";
 import { bookings } from "@/db/schema";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest, res: NextResponse) {
   const { name, email, date, time, service } = await req.json();
 
   console.log("check values===>", name, email, date, time, service);
