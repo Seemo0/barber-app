@@ -34,9 +34,9 @@ export async function POST(req: NextRequest) {
       message: "Booking successfully created!",
       data: result,
     });
-  } catch (error: any) {
+  } catch (error) {
     return NextResponse.json(
-      { message: "Error saving booking", error: error.message },
+      { message: "Error saving booking", error: error },
       { status: 500 }
     );
   }
